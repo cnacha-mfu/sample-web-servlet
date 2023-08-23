@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Manipulation Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>jQuery Manipulation Example</h1>
+    <p id="demo">Original text.</p>
+    
+    <button id="changeText">Change Text</button>
+    <button id="changeColor">Change Color</button>
+    
+    <script>
+        $(document).ready(function() {
+            // Change text on button click
+            $("#changeText").click(function() {
+                $("#demo").text("New text using jQuery!");
+            });
+            
+            // Change color on button click
+            $("#changeColor").click(function() {
+                $("#demo").css("color", "blue");
+            });
+            // Change color on mouse over
+            $("#demo").mouseover(function() {
+                $("#demo").css("color", "red");
+            });
+        });
+    </script>
+</body>
+</html>

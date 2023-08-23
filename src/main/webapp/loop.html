@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delayed Insertion</title>
+    <script>
+        // JavaScript code
+        window.onload = function() {
+            for (let i = 0; i < 10; i++) {
+                setTimeout(function() {
+                    let newParagraph = document.createElement("p");
+                    newParagraph.textContent = "Paragraph " + (i + 1);
+                    document.body.appendChild(newParagraph);
+                }, i * 1000); // Delay in milliseconds
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Delayed Insertion Example</h1>
+    
+</body>
+</html>
