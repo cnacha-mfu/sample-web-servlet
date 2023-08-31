@@ -17,7 +17,7 @@ public class HelloServlet extends HttpServlet{
     }
     //service for both get and post
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-   
+        String name = request.getParameter("name");
          // Set the response content type
         response.setContentType("text/html");
 
@@ -25,7 +25,7 @@ public class HelloServlet extends HttpServlet{
         PrintWriter out = response.getWriter();
 
         // print out hello world
-        out.println("<h1>Hello World!</h1>");
+        out.println("Hello "+name+"!");
     }
     //destroy
     public void destroy(){
