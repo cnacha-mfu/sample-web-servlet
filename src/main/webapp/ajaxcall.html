@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Call to HelloServlet using jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>AJAX Call to HelloServlet using jQuery</h1>
+    <label for="nameInput">Enter your name: </label>
+    <input type="text" id="nameInput">
+    <button id="submitButton">Submit</button>
+    <p id="responseText"></p>
+
+    <script>
+        $(document).ready(function() {
+            $("#submitButton").click(function() {
+                let name = $("#nameInput").val();
+                if (name !== "") {
+                    // TODO: use $.ajax to send a GET request to "/hello"
+                    //       with data { name: name }; on success, put the
+                    //       responseText into the #responseText paragraph
+                    //       with $("#responseText").text(...)
+
+                }
+            });
+        });
+    </script>
+</body>
+</html>

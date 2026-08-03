@@ -9,26 +9,29 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+// @WebServlet maps this servlet to the URL http://localhost:8080/hello
 @WebServlet(urlPatterns = "/hello")
-public class HelloServlet extends HttpServlet{
-    //init
-    public void init(){
+public class HelloServlet extends HttpServlet {
+    // called once, when the server creates the servlet
+    public void init() {
         System.out.println("HelloServlet is initialized");
     }
-    //service for both get and post
+
+    // called for every request (both GET and POST)
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-   
-         // Set the response content type
-        response.setContentType("text/html");
 
-        // Obtain a PrintWriter to send HTML responses
-        PrintWriter out = response.getWriter();
+        // TODO Step 1.1: set the response content type to "text/html"
 
-        // print out hello world
-        out.println("<h1>Hello World!</h1>");
+        // TODO Step 1.2: get a PrintWriter from the response and
+        //                print an HTML greeting, e.g. <h1>Hello World!</h1>
+
+        // TODO Step 2: read the "name" parameter from the request and
+        //              greet that name instead, e.g. "Hello Nacha!"
+
     }
-    //destroy
-    public void destroy(){
+
+    // called once, when the server shuts the servlet down
+    public void destroy() {
         System.out.println("HelloServlet is destroyed");
     }
 }
